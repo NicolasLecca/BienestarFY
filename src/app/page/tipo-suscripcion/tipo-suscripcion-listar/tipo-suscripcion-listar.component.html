@@ -1,4 +1,6 @@
-<p>Tipo suscripcion-listar works!</p>
+<div class ="container">
+  <br>
+  <h1 >Tipo de Suscripcion</h1>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef>id</th>
@@ -24,3 +26,4 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
+</div>
