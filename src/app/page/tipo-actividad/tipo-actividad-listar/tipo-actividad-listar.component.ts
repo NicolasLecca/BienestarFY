@@ -11,12 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoActividadListarComponent implements OnInit {
   dataSource: MatTableDataSource<TipoActividad> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'nombre', 'descripcion'];
+  displayedColumns: string[] = ['id', 'nombre', 'descripcion','acciones'];
   constructor(private tas:TipoActividadService) { }
 
   ngOnInit(): void {
     this.tas.listar().subscribe(data =>{
       this.dataSource=new MatTableDataSource(data);
+
+      this.tas.getLista().subscribe(data => {
+        this.dataSource = new MatTableDataSource(data);
+      });
+    
     })  }
 
 }
