@@ -1,3 +1,4 @@
+import { TipoHorarioCreaeditaComponent } from './page/tipo-horario/tipo-horario-creaedita/tipo-horario-creaedita.component';
 import { CategoriaComponent } from './page/categoria/categoria.component';
 import { ReservaComponent } from './page/reserva/reserva.component';
 import { TipoActividadComponent } from './page/tipo-actividad/tipo-actividad.component';
@@ -15,7 +16,9 @@ import { HorarioComponent } from './page/horario/horario.component';
 const routes: Routes = [
   {
     path: 'tipohorario', component: TipoHorarioComponent, children:[
-  
+      { path: 'nuevo', component: TipoHorarioCreaeditaComponent },
+      { path: 'edicion/:id', component: TipoHorarioCreaeditaComponent }
+
     ]
   },{
     path:'horario',component:HorarioComponent,children:[

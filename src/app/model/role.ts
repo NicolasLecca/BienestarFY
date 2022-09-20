@@ -1,7 +1,6 @@
-import { Usuario } from './usuario';
 
 export class Role {
-    idRole: number = 0;
+    id: number = 0;
+    nombreRole: string="";
     descripcionRole: string = "";
-    usuario:Usuario = new Usuario();
 }
