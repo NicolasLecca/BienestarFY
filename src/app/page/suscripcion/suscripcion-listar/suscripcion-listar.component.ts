@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Suscripcion } from 'src/app/model/suscripcion';
+import { SuscripcionService } from './../../../service/suscripcion.service';
+import { Suscripcion } from './../../../model/suscripcion';
 import { MatTableDataSource } from '@angular/material/table';
-import { SuscripcionService } from 'src/app/service/suscripcion.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-suscripcion-listar',
@@ -9,15 +9,14 @@ import { SuscripcionService } from 'src/app/service/suscripcion.service';
   styleUrls: ['./suscripcion-listar.component.css']
 })
 export class SuscripcionListarComponent implements OnInit {
-  lista: Suscripcion[] = [];
   dataSource: MatTableDataSource<Suscripcion> = new MatTableDataSource();
-  displayedColumns: string[]=['id','nombreSuscripcion','fechaInicio','fechaFin'];
-  constructor(private pService: SuscripcionService) { }
+  displayedColumns:string[]=['id','nombre','precio','fechainicio','fechafin','tipo']
+  constructor(private ss: SuscripcionService) { }
 
   ngOnInit(): void {
-    this.pService.listar().subscribe(data => {
-      this.dataSource = new MatTableDataSource(data);
-    });
-
+    this.ss.listar().subscribe(d => {
+      this.dataSource = new MatTableDataSource(d);
+    })
   }
+
 }

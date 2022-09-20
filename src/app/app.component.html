@@ -1,17 +1,28 @@
 
 <div>
-  <div class="header">
-    <h1 class="title">Bienestarfy</h1>
-    <menu class="menu">
-      <ul>
-        <li class="indice">
-          <a routerLink="/">Suscripciones</a>
-          <a routerLink="/tiposuscripcion">Tipo de Suscripcion</a>
-        </li>
-      </ul>
-    </menu>
+    <div class="header">
+      <h1 class="title">Bienestarfy </h1>
+      <menu class="menu">
+        <table></table>
+        <ul>
+          <li class="indice">
+      
+            <a routerLink="/actividad">Actividad</a>
+            <a routerLink="/tipoactividad">Tipo de Actividad</a>
+            <a routerLink="/categoria">Categoria</a>
+            <a routerLink="/horario">Horario</a>
+            <a routerLink="/tipohorario">Tipo de Horario</a>
+            <a routerLink="/reserva">Reserva</a>
+            <a routerLink="/role">Rol</a>
+            <a routerLink="/suscripcion">Suscripcion</a>
+            <a routerLink="/tiposuscripcion">Tipo de Suscripcion</a>
+            <a routerLink="/usuario">Usuario</a>
+          </li>
+        </ul>
+      </menu>
+    </div>
+    <router-outlet></router-outlet>
+    <app-usuario></app-usuario>
+
   </div>
-  <router-outlet></router-outlet>
-  <app-suscripcion></app-suscripcion>
-  <app-tiposuscripcion></app-tiposuscripcion>
-</div>
+  

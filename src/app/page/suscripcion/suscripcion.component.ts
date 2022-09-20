@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-suscripcion',
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SuscripcionComponent implements OnInit {
 
-  constructor(public route: ActivatedRoute) { }
+  constructor(public route:ActivatedRoute) { }
 
   ngOnInit(): void {
   }
