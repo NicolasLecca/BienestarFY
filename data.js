@@ -191,23 +191,23 @@ module.exports = function () {
         ],
         tipoActividad: [
             {
-                idTipoActividad: 1,
+                id: 1,
                 nombreTipoActividad: "Mejora de la calidad del sueño",
                 descripcionTipoActividad: "Descripcion TipoActividad 1"
 
             },
             {
-                idTipoActividad: 2,
+                id: 2,
                 nombreTipoActividad: "Reduccion del estres o la ansiedad",
                 descripcionTipoActividad: "Descripcion TipoActividad 2"
             },
             {
-                idTipoActividad: 3,
+                id: 3,
                 nombreTipoActividad: "TMejora de la concentracion ",
                 descripcionTipoActividad: "Descripcion TipoActividad 3"
             },
             {
-                idTipoActividad: 4,
+                id: 4,
                 nombreTipoActividad: "Ejercios",
                 descripcionTipoActividad: "Descripcion TipoActividad 4"
 

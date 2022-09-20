@@ -1,3 +1,4 @@
+import { TipoActividadCreaEditaComponent } from './page/tipo-actividad/tipo-actividad-creaedita/tipo-actividad-creaedita.component';
 import { TipoHorarioCreaeditaComponent } from './page/tipo-horario/tipo-horario-creaedita/tipo-horario-creaedita.component';
 import { CategoriaComponent } from './page/categoria/categoria.component';
 import { ReservaComponent } from './page/reserva/reserva.component';
@@ -11,6 +12,7 @@ import { TipoHorarioComponent } from './page/tipo-horario/tipo-horario.component
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HorarioComponent } from './page/horario/horario.component';
+TipoActividadCreaEditaComponent
 
 
 const routes: Routes = [
@@ -52,7 +54,9 @@ const routes: Routes = [
   },
   {
     path:'tipoactividad',component:TipoActividadComponent,children:[
-  
+      { path: 'nuevo', component: TipoActividadCreaEditaComponent },
+      { path: 'edicion/:id', component: TipoActividadCreaEditaComponent }
+    
     ]
   },
   {

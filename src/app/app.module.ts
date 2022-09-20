@@ -30,6 +30,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { TipoActividadCreaEditaComponent } from './page/tipo-actividad/tipo-actividad-creaedita/tipo-actividad-creaedita.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { FormsModule } from '@angular/forms';
     ReservaListarComponent,
     ActividadListarComponent,
     TipoActividadListarComponent,
-    TipoHorarioCreaeditaComponent
+    TipoHorarioCreaeditaComponent,
+    TipoActividadCreaEditaComponent
   ],
   imports: [
     BrowserModule,
