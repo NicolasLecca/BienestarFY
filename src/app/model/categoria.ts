@@ -1,9 +1,7 @@
-import { Reserva } from './reserva';
-
 
 export class Categoria{
-  idcat:number=0;
-  nombrecat:string="";
-
-  reserva:Reserva=new Reserva();
-}
+    idCategoria:number=0;
+    nombreCategoria:string="";
+    descripcionCategoria:string="";
+  }
+  

@@ -1,7 +1,8 @@
+import { MatTableDataSource } from '@angular/material/table';
+import { ReservaService } from './../../../service/reserva.service';
+import { Reserva } from './../../../model/reserva';
 import { Component, OnInit } from '@angular/core';
-import { ReservaService } from 'src/app/service/reserva.service';
-import { MatTableDataSource } from '@angular/material/table'
-import { Reserva } from 'src/app/model/reserva';
+
 @Component({
   selector: 'app-reserva-listar',
   templateUrl: './reserva-listar.component.html',
@@ -9,13 +10,12 @@ import { Reserva } from 'src/app/model/reserva';
 })
 export class ReservaListarComponent implements OnInit {
   dataSource: MatTableDataSource<Reserva> = new MatTableDataSource();
-  displayedColumns:string[]=['idrs','fecha','iduser','idses'];
-  constructor(private ps: ReservaService) { }
+  displayedColumns:string[]=['id','fecha','usuario','horario']
+  constructor(private rs: ReservaService) { }
 
   ngOnInit(): void {
-    this.ps.listar().subscribe(data => {
-      this.dataSource=new MatTableDataSource(data);
+    this.rs.listar().subscribe(d => {
+      this.dataSource = new MatTableDataSource(d);
     })
   }
-
 }

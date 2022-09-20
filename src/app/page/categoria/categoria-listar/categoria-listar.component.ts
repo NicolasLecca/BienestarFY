@@ -1,7 +1,8 @@
 import { MatTableDataSource } from '@angular/material/table';
+import { CategoriaService } from './../../../service/categoria.service';
+import { Categoria } from './../../../model/categoria';
 import { Component, OnInit } from '@angular/core';
-import { CategoriaService } from 'src/app/service/categoria.service';
-import { Categoria } from 'src/app/model/categoria';
+
 
 @Component({
   selector: 'app-categoria-listar',
@@ -10,13 +11,12 @@ import { Categoria } from 'src/app/model/categoria';
 })
 export class CategoriaListarComponent implements OnInit {
   dataSource: MatTableDataSource<Categoria> = new MatTableDataSource();
-  displayedColumns:string[]=['idcat','nombrecat']
-  constructor(private Vs: CategoriaService) { }
+  displayedColumns: string[] = ['id', 'nombre', 'descripcion'];
+  constructor(private cs:CategoriaService) { }
 
   ngOnInit(): void {
-    this.Vs.listar().subscribe(d => {
-      this.dataSource = new MatTableDataSource(d);
-    })
-  }
+    this.cs.listar().subscribe(data =>{
+      this.dataSource=new MatTableDataSource(data);
+    })  }
 
 }

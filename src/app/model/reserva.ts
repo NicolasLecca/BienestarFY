@@ -1,7 +1,9 @@
-export class Reserva{
-    idrs:number=0;
-    fecha:string="";
-    iduser:number=0;
-    idses:number=0;
+import { Usuario } from "./usuario";
+import { Horario } from "./horario";
 
+export class Reserva{
+    idReserva:number=0;
+    FechaReserva:string="";
+    usuario: Usuario = new Usuario();
+    horario: Horario = new Horario();
 }

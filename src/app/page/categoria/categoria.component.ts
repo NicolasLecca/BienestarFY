@@ -1,6 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.component.html',
