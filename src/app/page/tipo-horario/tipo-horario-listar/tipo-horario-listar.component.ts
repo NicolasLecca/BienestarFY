@@ -9,12 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoHorarioListarComponent implements OnInit {
   dataSource: MatTableDataSource<TipoHorario> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'nombre', 'descripcion'];
+  displayedColumns: string[] = ['id', 'nombre', 'descripcion','acciones'];
   constructor(private ths:TipoHorarioService) { }
 
   ngOnInit(): void {
     this.ths.listar().subscribe(data =>{
       this.dataSource=new MatTableDataSource(data);
-    })  }
+    })  
+    this.ths.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
+  }
 
 }
