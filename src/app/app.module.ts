@@ -25,6 +25,12 @@ import { CategoriaComponent } from './page/categoria/categoria.component';
 import { CategoriaListarComponent } from './page/categoria/categoria-listar/categoria-listar.component';
 import { ReservaListarComponent } from './page/reserva/reserva-listar/reserva-listar.component';
 import { ActividadListarComponent } from './page/actividad/actividad-listar/actividad-listar.component';
+import { TipoHorarioCreaeditaComponent } from './page/tipo-horario/tipo-horario-creaedita/tipo-horario-creaedita.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import {MatIconModule} from'@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { TipoActividadCreaEditaComponent } from './page/tipo-actividad/tipo-actividad-creaedita/tipo-actividad-creaedita.component';
 
 
 @NgModule({
@@ -49,14 +55,20 @@ import { ActividadListarComponent } from './page/actividad/actividad-listar/acti
     CategoriaListarComponent,
     ReservaListarComponent,
     ActividadListarComponent,
-    TipoActividadListarComponent
+    TipoActividadListarComponent,
+    TipoHorarioCreaeditaComponent,
+    TipoActividadCreaEditaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
