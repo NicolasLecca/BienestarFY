@@ -1,5 +1,5 @@
 export class TipoActividad{
-    idTipoActividad:number=0;
+    id:number=0;
     nombreTipoActividad:string="";
     descripcionTipoActividad:string="";
   }

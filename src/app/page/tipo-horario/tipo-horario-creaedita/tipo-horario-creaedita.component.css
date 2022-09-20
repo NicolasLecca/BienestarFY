@@ -10,9 +10,8 @@ table {
   
   }
   th{
+    text-align: center;
     background-color: green;
     border-bottom: solid 5px ;
     color: white;
-    text-align: center;
   }
-  
