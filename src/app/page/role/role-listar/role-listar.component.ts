@@ -11,7 +11,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class RoleListarComponent implements OnInit {
   dataSource: MatTableDataSource<Role> = new MatTableDataSource();
-  displayedColumns:string[]=['id','descripcion','usuario']
+  displayedColumns:string[]=['id','nombre','descripcion']
 
   constructor(private rs: RoleService) { }
 
