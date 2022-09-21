@@ -4,23 +4,23 @@ module.exports = function () {
     var data = {
         tipoHorario: [
             {
-                id: 1,
+                idTipoHorario: 1,
                 nombreTipoHorario: "TipoHorario 1",
                 descripcionTipoHorario: "Descripcion TipoHorario 1"
 
             },
             {
-                id: 2,
+                idTipoHorario: 2,
                 nombreTipoHorario: "TipoHorario 2",
                 descripcionTipoHorario: "Descripcion TipoHorario 2"
             },
             {
-                id: 3,
+                idTipoHorario: 3,
                 nombreTipoHorario: "TipoHorario 3",
                 descripcionTipoHorario: "Descripcion TipoHorario 3"
             },
             {
-                id: 4,
+                idTipoHorario: 4,
                 nombreTipoHorario: "TipoHorario 4",
                 descripcionTipoHorario: "Descripcion TipoHorario 4"
 
@@ -74,8 +74,7 @@ module.exports = function () {
                 edadUsuario: 11,
                 telefonoUsuario: 1111,
                 categoria:{id:1},
-                suscripcion:{id:2},
-                role:{id:3}
+                suscripcion:{id:2}
             },
             {
                 idUsuario: 2,
@@ -86,8 +85,7 @@ module.exports = function () {
                 edadUsuario: 22,
                 telefonoUsuario: 22222,
                 categoria:{id:3},
-                suscripcion:{id:4},
-                role:{id:2}
+                suscripcion:{id:4}
 
             },
             {
@@ -100,7 +98,6 @@ module.exports = function () {
                 telefonoUsuario: 333333,
                 categoria:{id:1},
                 suscripcion:{id:2},
-                role:{id:1}
 
             },
             {
@@ -113,25 +110,24 @@ module.exports = function () {
                 telefonoUsuario: 444444,
                 categoria:{id:4},
                 suscripcion:{id:1},
-                role:{id:4}
 
             }
         ],
         role: [
             {
                 idRole: 1,
-                nombreRole: "Psicologo",
-                descripcionRole:"Descripcion Psicologo"
+                descripcionRole: "Psicologo",
+                usuario: { id: 2 },
             },
             {
                 idRole: 2,
-                nombreRole: "Admin",
-                descripcionRole:"Descripcion Admin"
+                descripcionRole: "Admin",
+                usuario: { id: 3 },
             },
             {
                 idRole: 3,
-                nombreRole: "Cliente",
-                descripcionRole:"Descripcion Cliente"
+                descripcionRole: "Cliente",
+                usuario: { id: 4 },
             }
 
         ],
